@@ -111,4 +111,33 @@ with open(..., "rb") as f:
 
 # before using pretokemization, remove special tokens from chunk/corpus (ex. <|endoftext|> ) using re.split with "|" ⌋.join(special_tokens)
 # test with test_train_bpe_special_tokens
-#
+
+def train_bpe(
+        input_path: str,
+        vocab_size: int,
+        special_tokens:list[str]
+
+        vocab_size = 400
+        special_tokens = list("<|endoftext|>")
+
+        new_input_path = re.split("|" ⌋.join(special_tokens), input_path)
+
+        new_input_path=find_chunk_boundaries(input, 4, <|endoftext|>)
+
+        PAT = r"""'(?:[sdmt]|ll|ve|re)| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+(?!\S)|\s+"""
+        new_input_path = re.finditer(PAT,  new_input_path))
+        
+        vocab_dict = list([byte(i) for i in range(256)], <|endoftext|>)
+        dict_len = len(vocab_dict)
+        vocab_dict[(dict_len + 1)] = byte(max(new_input_path))
+
+
+        vocab_keys = range(dict_len)
+        vocab = dict([(j,k) for j, k in zip(vocab_keys, vocab_dict)])
+       
+
+)-> tuple[dict[int,bytes], list[tuple[bytes,bytes]]]:
+    
+     return [merges, vocab]
+
+#test github connectivity
